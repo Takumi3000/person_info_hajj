@@ -3,22 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Image</title>
+    <title>Information Page</title>
     <style>
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
         }
-        .fullscreen-image {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover; /* Сохранение пропорций изображения */
+        .navbar {
+            background-color: #35475e;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+        }
+        .language-bar {
+            background-color: #5a6b82;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .language-bar a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .profile, .details, .contacts {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile img {
+            width: 150px;
+            height: auto;
+            margin: 10px 0;
+        }
+        .profile p {
+            margin: 5px 0;
+        }
+        .details, .contacts {
+            width: 30%;
+        }
+        .details h3, .contacts h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .details p, .contacts p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <img class="fullscreen-image" src="1.png" alt="Fullscreen Image">
+    <div class="navbar">
+        Информация о паломнике
+    </div>
+    <div class="language-bar">
+        <a href="#">Русский</a> | <a href="#">English</a> | <a href="#">العربية</a>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" alt="Flag of Russia">
+            <img src="profile.jpg" alt="Profile Photo">
+            <p>ABDULAZIZOV MAGOMED</p>
+            <p>ID: SHR-1401253d63d91f5a6711899dfa</p>
+            <p>Russia</p>
+        </div>
+        <div class="details">
+            <h3>Общее</h3>
+            <p><strong>Программа:</strong> Эконом прямой MCX</p>
+            <h3>Вылет из РФ</h3>
+            <p><strong>Рейс:</strong> D-01-A (MCX-JED)</p>
+            <p><strong>Группа:</strong> D-01-A-1</p>
+            <p><strong>Номер рейса:</strong> J9-1351</p>
+            <p><strong>Вылет:</strong> MCX MAKHACHKALA 17.05.2024 23:30</p>
+            <h3>Вылет из KCA</h3>
+            <p><strong>Рейс:</strong> D-01-B (MED-MCX)</p>
+            <p><strong>Группа:</strong> D-01-B-1</p>
+            <p><strong>Номер рейса:</strong> J9-1399</p>
+            <p><strong>Вылет:</strong> MED MADINAH 29.06.2024 14:30</p>
+        </div>
+        <div class="contacts">
+            <h3>Марва Тур<br><small>hajj company</small></h3>
+            <p><strong>Контакты</strong></p>
+            <p><strong>Россия:</strong> +88005577676</p>
+            <p><strong>Медина:</strong> +9663577167</p>
+            <p><strong>Мекка:</strong> +9663577164</p>
+        </div>
+    </div>
 </body>
 </html>
