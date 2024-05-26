@@ -34,17 +34,12 @@
         .info p {
             margin: 5px 0;
         }
-        .info input[type="text"],
-        .info input[type="date"],
-        .info input[type="number"] {
-            width: calc(100% - 10px);
-            margin: 5px 0;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .info input[type="file"] {
-            margin-top: 5px;
+        .info img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -53,17 +48,16 @@
         <h1>Person Information</h1>
         <div class="info">
             <h3>Photo</h3>
-            <input type="file" accept="image/*">
+            <img src="image_link" alt="Photo">
         </div>
         <div class="info">
             <h3>Personal Details</h3>
-            <p><strong>Фамилия:</strong> <input type="text" name="lastname"></p>
-            <p><strong>Имя:</strong> <input type="text" name="firstname"></p>
-            <p><strong>Отчество:</strong> <input type="text" name="middlename"></p>
-            <p><strong>Дата рождения:</strong> <input type="date" name="birthdate"></p>
-            <p><strong>Пол:</strong> <input type="text" name="gender"></p>
-            <p><strong>Страна:</strong> <input type="text" name="country"></p>
-            <p><strong>Паспорт No.:</strong> <input type="text" name="passport"></p>
+            <p><strong>Last Name:</strong> GAZAMOV</p>
+            <p><strong>First Name:</strong> KURBANZHAN</p>
+            <p><strong>Date of Birth:</strong> 18/09/1983</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Country:</strong> KYRGYZ REPUBLIC</p>
+            <p><strong>Passport No.:</strong> 21809198301520</p>
         </div>
     </div>
 </body>
