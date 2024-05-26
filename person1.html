@@ -31,6 +31,7 @@
         }
         .container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin: 20px;
         }
@@ -39,9 +40,11 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 8px;
+            margin: 10px;
         }
         .profile {
             text-align: center;
+            flex: 1 1 100%;
         }
         .profile img {
             width: 150px;
@@ -52,7 +55,7 @@
             margin: 5px 0;
         }
         .details, .contacts {
-            width: 30%;
+            flex: 1 1 45%;
         }
         .details h3, .contacts h3 {
             border-bottom: 1px solid #ddd;
@@ -61,6 +64,16 @@
         }
         .details p, .contacts p {
             margin: 5px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .details, .contacts {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -173,8 +186,8 @@
                 country: 'روسيا',
                 commonHeader: 'عام',
                 programLabel: 'برنامج:',
-                program: 'اقتصاد مباشر MCX',
-                departureRussiaHeader: 'مغادرة من روسيا',
+                program: 'الاقتصاد المباشر MCX',
+                departureRussiaHeader: 'المغادرة من روسيا',
                 flightLabel: 'رحلة:',
                 flightRussia: 'D-01-A (MCX-JED)',
                 groupLabel: 'مجموعة:',
@@ -183,7 +196,7 @@
                 flightNumberRussia: 'J9-1351',
                 departureLabel: 'مغادرة:',
                 departureRussia: 'MCX ماخاتشكالا 17.05.2024 23:30',
-                departureSaudiHeader: 'مغادرة من المملكة العربية السعودية',
+                departureSaudiHeader: 'المغادرة من المملكة العربية السعودية',
                 flightLabelSaudi: 'رحلة:',
                 flightSaudi: 'D-01-B (MED-MCX)',
                 groupLabelSaudi: 'مجموعة:',
