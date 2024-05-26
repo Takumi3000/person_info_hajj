@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person 1 Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        .info h3 {
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Person 1 Information</h1>
+        <div class="info">
+            <h3>Common</h3>
+            <p><strong>Program:</strong> Эконом прямой MCX</p>
+        </div>
+        <div class="info">
+            <h3>Departure from Russia</h3>
+            <p><strong>Flight:</strong> D-01-A (MCX-JED)</p>
+            <p><strong>Group:</strong> D-01-A-1</p>
+            <p><strong>Flight number:</strong> J9-1351</p>
+            <p><strong>Departure:</strong> MCX MAKHACHKALA 17.05.2024 23:30</p>
+        </div>
+        <div class="info">
+            <h3>Return to Russia</h3>
+            <p><strong>Flight:</strong> D-01-B (MED-MCX)</p>
+            <p><strong>Group:</strong> D-01-B-1</p>
+            <p><strong>Flight number:</strong> J9-1399</p>
+            <p><strong>Departure:</strong> MED MADINAH 29.06.2024 14:30</p>
+        </div>
+        <div class="info">
+            <h3>Contacts</h3>
+            <p><strong>Russia:</strong> +88005577676</p>
+            <p><strong>Medina:</strong> +9663577167</p>
+            <p><strong>Makkah:</strong> +9663577164</p>
+        </div>
+    </div>
+</body>
+</html>
