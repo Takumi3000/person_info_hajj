@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .pdf-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        .pdf-object {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
 <body>
-    <div class="container">
-        <h1>Person Information</h1>
-        <div class="info">
-            <h3>Photo</h3>
-            <img src="3.pdf" alt="Photo">
-        </div>
+    <div class="pdf-container">
+        <embed class="pdf-object" src="3.pdf" type="application/pdf" />
     </div>
 </body>
 </html>
+
