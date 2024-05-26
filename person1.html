@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF-like Page</title>
+    <title>Fullscreen Image</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            height: 100%;
+            overflow: hidden;
         }
-        .pdf-like-image {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
+        .fullscreen-image {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Сохранение пропорций изображения */
         }
     </style>
 </head>
 <body>
-    <img class="pdf-like-image" src="1.png" alt="PDF-like Image">
+    <img class="fullscreen-image" src="1.png" alt="Fullscreen Image">
 </body>
 </html>
