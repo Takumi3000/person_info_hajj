@@ -27,6 +27,7 @@
             color: #fff;
             margin: 0 10px;
             text-decoration: none;
+            cursor: pointer;
         }
         .container {
             display: flex;
@@ -64,41 +65,113 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        Информация о паломнике
-    </div>
+    <div class="navbar" id="navbar">Information about the Pilgrim</div>
     <div class="language-bar">
-        <a href="#">Русский</a> | <a href="#">English</a> | <a href="#">العربية</a>
+        <a id="lang-ru">Русский</a> | <a id="lang-en">English</a> | <a id="lang-ar">العربية</a>
     </div>
     <div class="container">
         <div class="profile">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" alt="Flag of Russia">
             <img src="profile.jpg" alt="Profile Photo">
-            <p>ABDULAZIZOV MAGOMED</p>
-            <p>ID: SHR-1401253d63d91f5a6711899dfa</p>
-            <p>Russia</p>
+            <p id="name">ABDULAZIZOV MAGOMED</p>
+            <p id="id">ID: SHR-1401253d63d91f5a6711899dfa</p>
+            <p id="country">Russia</p>
         </div>
         <div class="details">
-            <h3>Общее</h3>
-            <p><strong>Программа:</strong> Эконом прямой MCX</p>
-            <h3>Вылет из РФ</h3>
-            <p><strong>Рейс:</strong> D-01-A (MCX-JED)</p>
-            <p><strong>Группа:</strong> D-01-A-1</p>
-            <p><strong>Номер рейса:</strong> J9-1351</p>
-            <p><strong>Вылет:</strong> MCX MAKHACHKALA 17.05.2024 23:30</p>
-            <h3>Вылет из KCA</h3>
-            <p><strong>Рейс:</strong> D-01-B (MED-MCX)</p>
-            <p><strong>Группа:</strong> D-01-B-1</p>
-            <p><strong>Номер рейса:</strong> J9-1399</p>
-            <p><strong>Вылет:</strong> MED MADINAH 29.06.2024 14:30</p>
+            <h3 id="common-header">General</h3>
+            <p><strong id="program-label">Program:</strong> <span id="program">Econom direct MCX</span></p>
+            <h3 id="departure-russia-header">Departure from Russia</h3>
+            <p><strong id="flight-label">Flight:</strong> <span id="flight-russia">D-01-A (MCX-JED)</span></p>
+            <p><strong id="group-label">Group:</strong> <span id="group-russia">D-01-A-1</span></p>
+            <p><strong id="flight-number-label">Flight number:</strong> <span id="flight-number-russia">J9-1351</span></p>
+            <p><strong id="departure-label">Departure:</strong> <span id="departure-russia">MCX MAKHACHKALA 17.05.2024 23:30</span></p>
+            <h3 id="departure-saudi-header">Departure from KSA</h3>
+            <p><strong id="flight-label-saudi">Flight:</strong> <span id="flight-saudi">D-01-B (MED-MCX)</span></p>
+            <p><strong id="group-label-saudi">Group:</strong> <span id="group-saudi">D-01-B-1</span></p>
+            <p><strong id="flight-number-label-saudi">Flight number:</strong> <span id="flight-number-saudi">J9-1399</span></p>
+            <p><strong id="departure-label-saudi">Departure:</strong> <span id="departure-saudi">MED MADINAH 29.06.2024 14:30</span></p>
         </div>
         <div class="contacts">
-            <h3>Марва Тур<br><small>hajj company</small></h3>
-            <p><strong>Контакты</strong></p>
-            <p><strong>Россия:</strong> +88005577676</p>
-            <p><strong>Медина:</strong> +9663577167</p>
-            <p><strong>Мекка:</strong> +9663577164</p>
+            <h3 id="company-name">Marwa Tour<br><small>hajj company</small></h3>
+            <p><strong id="contacts-header">Contacts</strong></p>
+            <p><strong id="russia-contact-label">Russia:</strong> +88005577676</p>
+            <p><strong id="medina-contact-label">Medina:</strong> +9663577167</p>
+            <p><strong id="mecca-contact-label">Mecca:</strong> +9663577164</p>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        const translations = {
+            ru: {
+                navbar: 'Информация о паломнике',
+                name: 'АБДУЛАЗИЗОВ МАГОМЕД',
+                id: 'ID: SHR-1401253d63d91f5a6711899dfa',
+                country: 'Россия',
+                commonHeader: 'Общее',
+                programLabel: 'Программа:',
+                program: 'Эконом прямой MCX',
+                departureRussiaHeader: 'Вылет из РФ',
+                flightLabel: 'Рейс:',
+                flightRussia: 'D-01-A (MCX-JED)',
+                groupLabel: 'Группа:',
+                groupRussia: 'D-01-A-1',
+                flightNumberLabel: 'Номер рейса:',
+                flightNumberRussia: 'J9-1351',
+                departureLabel: 'Вылет:',
+                departureRussia: 'MCX МАХАЧКАЛА 17.05.2024 23:30',
+                departureSaudiHeader: 'Вылет из KSA',
+                flightLabelSaudi: 'Рейс:',
+                flightSaudi: 'D-01-B (MED-MCX)',
+                groupLabelSaudi: 'Группа:',
+                groupSaudi: 'D-01-B-1',
+                flightNumberLabelSaudi: 'Номер рейса:',
+                flightNumberSaudi: 'J9-1399',
+                departureLabelSaudi: 'Вылет:',
+                departureSaudi: 'MED МЕДИНА 29.06.2024 14:30',
+                companyName: 'Марва Тур<br><small>хадж компания</small>',
+                contactsHeader: 'Контакты',
+                russiaContactLabel: 'Россия:',
+                medinaContactLabel: 'Медина:',
+                meccaContactLabel: 'Мекка:'
+            },
+            en: {
+                navbar: 'Information about the Pilgrim',
+                name: 'ABDULAZIZOV MAGOMED',
+                id: 'ID: SHR-1401253d63d91f5a6711899dfa',
+                country: 'Russia',
+                commonHeader: 'General',
+                programLabel: 'Program:',
+                program: 'Econom direct MCX',
+                departureRussiaHeader: 'Departure from Russia',
+                flightLabel: 'Flight:',
+                flightRussia: 'D-01-A (MCX-JED)',
+                groupLabel: 'Group:',
+                groupRussia: 'D-01-A-1',
+                flightNumberLabel: 'Flight number:',
+                flightNumberRussia: 'J9-1351',
+                departureLabel: 'Departure:',
+                departureRussia: 'MCX MAKHACHKALA 17.05.2024 23:30',
+                departureSaudiHeader: 'Departure from KSA',
+                flightLabelSaudi: 'Flight:',
+                flightSaudi: 'D-01-B (MED-MCX)',
+                groupLabelSaudi: 'Group:',
+                groupSaudi: 'D-01-B-1',
+                flightNumberLabelSaudi: 'Flight number:',
+                flightNumberSaudi: 'J9-1399',
+                departureLabelSaudi: 'Departure:',
+                departureSaudi: 'MED MADINAH 29.06.2024 14:30',
+                companyName: 'Marwa Tour<br><small>hajj company</small>',
+                contactsHeader: 'Contacts',
+                russiaContactLabel: 'Russia:',
+                medinaContactLabel: 'Medina:',
+                meccaContactLabel: 'Mecca:'
+            },
+            ar: {
+                navbar: 'معلومات عن الحاج',
+                name: 'عبد العزيز ماجوميد',
+                id: 'معرف: SHR-1401253d63d91f5a6711899dfa',
+                country: 'روسيا',
+                commonHeader: 'عام',
+                programLabel: 'برنامج:',
+                program: 'اقتصاد مباشر MCX',
+                departureRussiaHeader: 'مغادرة من روسيا',
