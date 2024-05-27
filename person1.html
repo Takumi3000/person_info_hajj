@@ -46,7 +46,12 @@
             text-align: center;
             flex: 1 1 100%;
         }
-        .profile img {
+        .profile .flag {
+            width: 150px;
+            height: auto;
+            margin: 10px 0;
+        }
+        .profile .photo {
             width: 150px;
             height: auto;
             margin: 10px 0;
@@ -85,8 +90,8 @@
     <div class="container">
         <div class="profile">
             <!-- Замените URL в src на путь к новому фото -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" alt="Flag of Russia">
-            <img src="photo_1.png" alt="Profile Photo">
+            <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" alt="Flag of Russia">
+            <img class="photo" src="path/to/your/new/profile.jpg" alt="Profile Photo">
             <p id="name">ГАЗАМОВ КУРБАН</p>
             <p id="id">ID: 21809198301520</p>
             <p id="country">Russia</p>
@@ -101,7 +106,7 @@
             <p><strong id="departure-label">Departure:</strong> <span id="departure-russia">MCX MAKHACHKALA 17.05.2024 23:30</span></p>
             <h3 id="departure-saudi-header">Departure from KSA</h3>
             <p><strong id="flight-label-saudi">Flight:</strong> <span id="flight-saudi">D-01-B (MED-MCX)</span></p>
-            <p><strong id="group-label-saudi">Group:</strong> <span id="group-saudi">D-01-B-1</span></p>
+            <p><strong id="group-label-saudi">Group:</strong> <span id="group-saudi">D-01-B-1</p>
             <p><strong id="flight-number-label-saudi">Flight number:</strong> <span id="flight-number-saudi">J9-1399</span></p>
             <p><strong id="departure-label-saudi">Departure:</strong> <span id="departure-saudi">MED MADINAH 29.06.2024 14:30</span></p>
         </div>
