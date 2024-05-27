@@ -182,12 +182,12 @@
             },
             ar: {
                 navbar: 'معلومات عن الحاج',
-                name: 'غازاموف كربان',
-                id: 'معرف: 21809198301520',
+                name: 'غازاموف كوربان',
+                id: 'ID: 21809198301520',
                 country: 'روسيا',
                 commonHeader: 'عام',
                 programLabel: 'برنامج:',
-                program: 'الاقتصاد المباشر MCX',
+                program: 'اقتصاد مباشر MCX',
                 departureRussiaHeader: 'المغادرة من روسيا',
                 flightLabel: 'رحلة:',
                 flightRussia: 'D-01-A (MCX-JED)',
@@ -195,8 +195,8 @@
                 groupRussia: 'D-01-A-1',
                 flightNumberLabel: 'رقم الرحلة:',
                 flightNumberRussia: 'J9-1351',
-                departureLabel: 'مغادرة:',
-                departureRussia: 'MCX ماخاتشكالا 17.05.2024 23:30',
+                departureLabel: 'المغادرة:',
+                departureRussia: 'MCX محج قلعة 17.05.2024 23:30',
                 departureSaudiHeader: 'المغادرة من المملكة العربية السعودية',
                 flightLabelSaudi: 'رحلة:',
                 flightSaudi: 'D-01-B (MED-MCX)',
@@ -204,55 +204,52 @@
                 groupSaudi: 'D-01-B-1',
                 flightNumberLabelSaudi: 'رقم الرحلة:',
                 flightNumberSaudi: 'J9-1399',
-                departureLabelSaudi: 'مغادرة:',
-                departureSaudi: 'MED المدينة 29.06.2024 14:30',
-                companyName: 'ماروا تور<br><small>شركة الحج</small>',
+                departureLabelSaudi: 'المغادرة:',
+                departureSaudi: 'MED المدينة المنورة 29.06.2024 14:30',
+                companyName: 'ماروا تور<br><small>شركة حج</small>',
                 contactsHeader: 'جهات الاتصال',
                 russiaContactLabel: 'روسيا:',
-                medinaContactLabel: 'المدينة:',
+                medinaContactLabel: 'المدينة المنورة:',
                 meccaContactLabel: 'مكة:'
             }
         };
 
-        function setLanguage(language) {
-            document.getElementById('navbar').innerHTML = translations[language].navbar;
-            document.getElementById('name').innerHTML = translations[language].name;
-            document.getElementById('id').innerHTML = translations[language].id;
-            document.getElementById('country').innerHTML = translations[language].country;
-            document.getElementById('common-header').innerHTML = translations[language].commonHeader;
-            document.getElementById('program-label').innerHTML = translations[language].programLabel;
-            document.getElementById('program').innerHTML = translations[language].program;
-            document.getElementById('departure-russia-header').innerHTML = translations[language].departureRussiaHeader;
-            document.getElementById('flight-label').innerHTML = translations[language].flightLabel;
-            document.getElementById('flight-russia').innerHTML = translations[language].flightRussia;
-            document.getElementById('group-label').innerHTML = translations[language].groupLabel;
-            document.getElementById('group-russia').innerHTML = translations[language].groupRussia;
-            document.getElementById('flight-number-label').innerHTML = translations[language].flightNumberLabel;
-            document.getElementById('flight-number-russia').innerHTML = translations[language].flightNumberRussia;
-            document.getElementById('departure-label').innerHTML = translations[language].departureLabel;
-            document.getElementById('departure-russia').innerHTML = translations[language].departureRussia;
-            document.getElementById('departure-saudi-header').innerHTML = translations[language].departureSaudiHeader;
-            document.getElementById('flight-label-saudi').innerHTML = translations[language].flightLabelSaudi;
-            document.getElementById('flight-saudi').innerHTML = translations[language].flightSaudi;
-            document.getElementById('group-label-saudi').innerHTML = translations[language].groupLabelSaudi;
-            document.getElementById('group-saudi').innerHTML = translations[language].groupSaudi;
-            document.getElementById('flight-number-label-saudi').innerHTML = translations[language].flightNumberLabelSaudi;
-            document.getElementById('flight-number-saudi').innerHTML = translations[language].flightNumberSaudi;
-            document.getElementById('departure-label-saudi').innerHTML = translations[language].departureLabelSaudi;
-            document.getElementById('departure-saudi').innerHTML = translations[language].departureSaudi;
-            document.getElementById('company-name').innerHTML = translations[language].companyName;
-            document.getElementById('contacts-header').innerHTML = translations[language].contactsHeader;
-            document.getElementById('russia-contact-label').innerHTML = translations[language].russiaContactLabel;
-            document.getElementById('medina-contact-label').innerHTML = translations[language].medinaContactLabel;
-            document.getElementById('mecca-contact-label').innerHTML = translations[language].meccaContactLabel;
+        document.getElementById('lang-ru').onclick = () => setLanguage('ru');
+        document.getElementById('lang-en').onclick = () => setLanguage('en');
+        document.getElementById('lang-ar').onclick = () => setLanguage('ar');
+
+        function setLanguage(lang) {
+            document.getElementById('navbar').innerHTML = translations[lang].navbar;
+            document.getElementById('name').innerHTML = translations[lang].name;
+            document.getElementById('id').innerHTML = translations[lang].id;
+            document.getElementById('country').innerHTML = translations[lang].country;
+            document.getElementById('common-header').innerHTML = translations[lang].commonHeader;
+            document.getElementById('program-label').innerHTML = translations[lang].programLabel;
+            document.getElementById('program').innerHTML = translations[lang].program;
+            document.getElementById('departure-russia-header').innerHTML = translations[lang].departureRussiaHeader;
+            document.getElementById('flight-label').innerHTML = translations[lang].flightLabel;
+            document.getElementById('flight-russia').innerHTML = translations[lang].flightRussia;
+            document.getElementById('group-label').innerHTML = translations[lang].groupLabel;
+            document.getElementById('group-russia').innerHTML = translations[lang].groupRussia;
+            document.getElementById('flight-number-label').innerHTML = translations[lang].flightNumberLabel;
+            document.getElementById('flight-number-russia').innerHTML = translations[lang].flightNumberRussia;
+            document.getElementById('departure-label').innerHTML = translations[lang].departureLabel;
+            document.getElementById('departure-russia').innerHTML = translations[lang].departureRussia;
+            document.getElementById('departure-saudi-header').innerHTML = translations[lang].departureSaudiHeader;
+            document.getElementById('flight-label-saudi').innerHTML = translations[lang].flightLabelSaudi;
+            document.getElementById('flight-saudi').innerHTML = translations[lang].flightSaudi;
+            document.getElementById('group-label-saudi').innerHTML = translations[lang].groupLabelSaudi;
+            document.getElementById('group-saudi').innerHTML = translations[lang].groupSaudi;
+            document.getElementById('flight-number-label-saudi').innerHTML = translations[lang].flightNumberLabelSaudi;
+            document.getElementById('flight-number-saudi').innerHTML = translations[lang].flightNumberSaudi;
+            document.getElementById('departure-label-saudi').innerHTML = translations[lang].departureLabelSaudi;
+            document.getElementById('departure-saudi').innerHTML = translations[lang].departureSaudi;
+            document.getElementById('company-name').innerHTML = translations[lang].companyName;
+            document.getElementById('contacts-header').innerHTML = translations[lang].contactsHeader;
+            document.getElementById('russia-contact-label').innerHTML = translations[lang].russiaContactLabel;
+            document.getElementById('medina-contact-label').innerHTML = translations[lang].medinaContactLabel;
+            document.getElementById('mecca-contact-label').innerHTML = translations[lang].meccaContactLabel;
         }
-
-        document.getElementById('lang-ru').addEventListener('click', () => setLanguage('ru'));
-        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
-        document.getElementById('lang-ar').addEventListener('click', () => setLanguage('ar'));
-
-        // Set default language to English
-        setLanguage('en');
     </script>
 </body>
 </html>
